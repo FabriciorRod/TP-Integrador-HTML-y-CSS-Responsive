@@ -1,10 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{
+    font-family: "Inter", sans-serif;
+    min-height: 200vh;
+    background-color: #fbfaff;  
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1{
-    color: red;
+:root{
+    --primary-text-color: #2b2b2b;
+    --btn-color: #632ade;
+    --background-nav-menu: #e1d1ff;
+    --text-color-p:#6a6a6a;
+}
+
+
+.nave-header{ 
+
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    color: #2b2b2b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 83px;
+}
+
+.nave-header__content{
+    max-width: 1022px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1022px; */
+    padding: 10px;
+    font-weight: 700;
+    
+    
+}    
+
+
+.nave-menu {  
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu_header-op{ 
+    margin: 0 4px;
+    padding: 6px 24px;
+    font-size: 14px;
+    color: #2b2b2b
+}
+
+
+
+.header__logo{ 
+    
+}
+
+.menu_nav-cobro{
+    margin: 0 4px;
+    padding: 6px 24px;
+    color: #2b2b2b;
+    text-decoration: none;
+    }
+
+    .menu_nav-cobro:hover{
+        color: #370d73;
+        background-color: #e1d1ff;
+        border-radius: 999px;
+        transition: 0.3s;
+    }
+
+.menu_nav-mas-soluciones{
+    margin: 0 4px;
+    padding: 6px 24px;
+    color: #2b2b2b;
+    text-decoration: none;
+    
+}
+
+.menu_nav-mas-soluciones:hover{
+    color: #370d73;
+    background-color: #e1d1ff;
+    border-radius: 999px;
+    transition: 0.3s;
+}
+
+.menu_nav-beneficios{
+    margin: 0 4px;
+    padding: 6px 24px;
+    color: #2b2b2b;
+    text-decoration: none;
+    border-right: 1px solid #bfbfbf;
+}
+.menu_nav-beneficios:hover{
+    color: #370d73;
+        background-color: #e1d1ff;
+        border-radius: 999px;
+        background-color: #e1d1ff;
+}
+.nave-header__btns{
+    font-size: 14px;
+    
+}
+
+.btn-btn-outline{
+    margin: 0 4px;
+    padding: 6px 24px;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #632ade;
+    color: #632ade;
+    border-radius: 999px;
+}
+
+.btn-btn-outline:hover{
+    background-color: #e1d1ff;
+    transition: 0.3s;
+    color: #370d73;
+    border-radius: 999px  ;
+}
+
+.btn-btn-primary{
+    margin: 0 4px;
+    padding: 6px 24px;
+    text-decoration: none;
+    background-color: #632ade;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    color: white;
+    border-radius: 999px;
+}
+
+.btn-btn-primary:hover{
+    background-color: #e1d1ff;
+    transition: 0.3s;
+    color: #370d73;
+    border: 1px solid #370d73;;
+}
+
+.header-nave_mobile{
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    
+}
+
+
+@media screen and (max-width: 960px) {
+    .nave-header{
+        display: none;
+        
+    }
+
+
+    .header-nave_mobile{
+        display: flex;
+        max-width: 100%;
+        position: relative;
+        border-bottom: 1px solid #e5e5e5;
+        min-height: 71px;
+        align-items: center;
+        padding: 0 16px; 
+        position: sticky;
+        top: 0;  
+        z-index: 1000;
+    }
+    .Nave-menu_button{
+   
+    }
+    .mobile-logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+
+@media screen and (min-width:1200px){
+
+    .nave_header{
+        display: flex;
+        
+
+    }
+
+    .header-nave_mobile{
+        display: none;
+    }
+
+}
+
+/* --Sección: "Vuelo de tu negocio": */
+
+.nave-flights{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 40px 20px;   
+    margin-bottom: 40px;
+}
+
+
+.container{
+    max-width: 1022px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    
+
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin: 8px;
+    color: #2b2b2b;
+    font-weight: 700;
+    letter-spacing: -1.8px;
+    /* line-height: 42px; */
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.bussiness-car{
+    display: flex;
+    flex-direction: column;
+    height: 314px;
+    gap: 16px;
+    padding: 24px;
+    margin-top: 12px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.bussiness-car h3{
+    font-size: 24px;
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+
+.bussiness-car p{
+    font-size: 18px;
+    color: #6a6a6a;
+}
+
+.bussines-car_icon{
+    width: 62px;
+    height: 62px;
+    background-color: #e1d1ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 19px;
+    
+
+}
+
+.bussines-car_icon svg{
+    width: 35px;
+    height: 35px;
+    fill: #632ade;
+}
+
+
+.bussiness-car:hover{
+    transform: translateY(-6px);
+    transition: 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .cards-container{
+    gap: 16px;
+}
+    h2{
+        font-size: 30px;
+        text-align: center;
+        text height: 36px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 829px) {
+    .cards-container{
+    gap: 8px;
+    padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 828px){
+    .cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 298px; */
+    }   
+    
+    
+    .bussiness-car h3{
+        font-size: 20px;
+    }
+    .bussiness-car p{
+        font-size: 16px;
+    }
+    
+}
+
+/* Seccion historias que vuelan */
+
+.stories-banner{
+    display: flex;
+    justify-content: center;  
+}
+
+.stories-container{
+    width: 100%;
+    max-width: 1022px;
+    display: flex;
+    gap: 32px;
+    padding: 32px 40px;
+    background-color: rgb(226, 210, 255);
+    border-radius: 32px;
+    box-sizing: border-box;
+}
+.stories-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    
+}
+h4{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 32px;
+    padding: 0;
+    color: #370d73;
+}
+
+.stories-txt span{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(54,12,114);
+}
+
+.stories-btn{
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: white;  
+    align-items: center;
+    min-width: 192px;
+    height: 46px;  
+    align-self: center; /* Termino aprendido  con ayuda de "chat gpt" */  
+    border: 1px solid transparent;
+}
+.stories-btn-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #652bdf;
+    text-decoration: none;
+}
+
+.stories-btn:hover {
     background-color: black;
+    transition: 0.3s;   
+}
+
+@media screen and (max-width: 900px){
+    .stories-container {
+        gap:16px
+    }
+}
+    
+@media screen and (max-width: 830px){
+
+    .stories-container{
+        flex-direction: column;
+        padding: 24px;
+    } 
+
+}
+
+
+/* <!-- Sección “Encontrá el medio de cobro ideal”:  --> */
+
+.payment-methods{
+    margin-top: 48px;
+    padding: 0 24px;
+}
+.payment-methods h2{
+    margin-bottom: 48px;
+    
+}
+.container-pay{
+    width: 100%;
+    max-width: 1022px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 32px;
+    background-color: white;
+    overflow:hidden;
+    margin-bottom: 48px;
+   
+}
+
+.payment-picture{
+    max-width:100%;
+    height:auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.payment-card{
+    
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 22px;
+    background-color: white;
+}
+
+.payment-card_content h3{
+    font-size: 24px;
+    color: #2b2b2b;
+    margin-bottom: 50px;
+    
+}
+
+.payment-card_content p{
+    font-size: 18px;
+    color: #2b2b2b;
+}
+
+.payment-card_btn{
+    padding: 14px 0;
+}
+
+.payment-card_btn a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.payment-card_btn span{
+color: #370d73;
+font-weight: 700;
+}
+
+.payment-card_btn svg{
+    stroke: #370d73;
+    padding: 1px;
+}
+
+.payment-card_btn :hover{
+    color: #632ade;
+    stroke: #632ade;
+}
+.container-pay-reverse{
+    width: 100%;
+    max-width: 1022px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 32px;
+    background-color: white;
+    overflow:hidden;
+}
+
+@media (max-width: 830px){
+    .container-pay{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .container-pay-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    
+
+}
+
+
+/* footer */
+
+.footer{
+    margin-top: 48px;
+    padding: 0 24px;
+    background-color: white;
+}
+.footer-logo{
+    width: 100%;
+    max-width: 1022px;
+    margin: 0 auto;
+    
+}
+.footer-container{
+    width: 100%;
+    max-width: 1022px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #bfbfbf;
+    padding: 0 0 32px;
+    
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+h4{
+    font-size: 16px;
+    color: #2b2b2b;
+    font-weight: 700;
+}
+
+.footer-column a{
+    font-size: 14px;
+    text-decoration: none;
+    color:#2b2b2b;
+    font-weight: 400;
+    padding: 8px 0;
+}
+
+
+.footer-column a:hover{
+    color:#632ade;
+    text-decoration: underline;
+    
+}
+
+@media (max-width:830px) {
+    .footer-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-column{
+        width: 50%;
+    }
+    
 }
