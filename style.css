@@ -38,11 +38,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 1022px; */
     padding: 10px;
-    font-weight: 700;
-    
-    
+    font-weight: 700;    
 }    
 
 
@@ -155,6 +152,10 @@ body{
     z-index: 1000;
     background-color: white;
     
+}
+.Nave-menu_button{
+    background: transparent;
+    border: none;
 }
 
 
@@ -333,7 +334,8 @@ h2{
 
 .stories-banner{
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    padding: 0 24px;  
 }
 
 .stories-container{
@@ -354,7 +356,8 @@ h2{
     width: 100%;
     
 }
-h4{
+
+.stories-txt h4{
     font-size: 30px;
     font-weight: 600;
     line-height: 32px;
